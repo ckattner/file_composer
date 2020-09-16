@@ -21,9 +21,11 @@ end
 
 require 'rspec/expectations'
 
+TEMP_DIR = 'tmp'
+
 RSpec.configure do |config|
   config.before(:suite) do
-    FileUtils.rm_rf('tmp')
+    FileUtils.rm_rf(TEMP_DIR)
   end
 end
 

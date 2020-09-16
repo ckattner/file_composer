@@ -5,10 +5,10 @@ require './lib/file_composer/version'
 Gem::Specification.new do |s|
   s.name        = 'file_composer'
   s.version     = FileComposer::VERSION
-  s.summary     = 'TBD'
+  s.summary     = 'High-level, pluggable, and declarative API for creating files'
 
   s.description = <<-DESCRIPTION
-    TBD
+    This library provides a declarative API, called a Blueprint, that allows you to specify text files and zip files and it will create them.  It is pluggable so other document types and storage mediums can be added.
   DESCRIPTION
 
   s.authors     = ['Matthew Ruggio']
@@ -36,6 +36,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('rake', '~> 13')
   s.add_development_dependency('rspec', '~> 3.8')
   s.add_development_dependency('rubocop', '~>0.88.0')
+  s.add_development_dependency('rubocop-ast', '~>0.3.0')
   s.add_development_dependency('simplecov', '~>0.18.5')
   s.add_development_dependency('simplecov-console', '~>0.7.0')
 end

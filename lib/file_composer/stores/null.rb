@@ -8,5 +8,13 @@
 #
 
 module FileComposer
-  VERSION = '1.0.0-alpha.1'
+  module Stores
+    # Default store, does nothing but provide a stand-in when you do not actually
+    # want to transfer files.
+    class Null
+      def move!(local_filename)
+        local_filename
+      end
+    end
+  end
 end

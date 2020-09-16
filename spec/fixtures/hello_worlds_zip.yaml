@@ -1,0 +1,14 @@
+documents:
+  - type: text
+    filename: hello_world_1.txt
+    data: FIRST HELLO WORLD!
+  - type: text
+    filename: some/directory/hello_world_2.txt
+    data: SECOND HELLO WORLD!
+  - type: zip
+    filename: nested.zip
+    blueprint:
+      documents:
+        - type: text
+          filename: hello_world_3.txt
+          data: THIRD HELLO WORLD!

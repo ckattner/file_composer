@@ -7,6 +7,12 @@
 # LICENSE file in the root directory of this source tree.
 #
 
-module FileComposer
-  VERSION = '1.0.0-alpha.1'
+require 'yaml'
+
+def read_yaml_file(*filename)
+  YAML.safe_load(read_binary_file(*filename))
+end
+
+def read_binary_file(*filename)
+  File.open(File.join(*filename)).read
 end

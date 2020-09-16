@@ -7,6 +7,10 @@
 # LICENSE file in the root directory of this source tree.
 #
 
-# To be implemented.
-module FileComposer
-end
+require 'acts_as_hashable'
+require 'benchmark'
+require 'securerandom'
+require 'time'
+require 'zip'
+
+require_relative 'file_composer/blueprint'
